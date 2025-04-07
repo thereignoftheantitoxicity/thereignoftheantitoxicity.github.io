@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Fall</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(#0f0f0f, #1a1a1a);
+      color: #e34c4c;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 800px;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .line {
+      margin: 20px 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: appear 1s ease forwards;
+    }
+
+    .line:nth-child(1) { animation-delay: 0.5s; }
+    .line:nth-child(2) { animation-delay: 1.5s; }
+    .line:nth-child(3) { animation-delay: 2.5s; }
+    .line:nth-child(4) { animation-delay: 3.5s; }
+    .line:nth-child(5) { animation-delay: 4.5s; }
+    .line:nth-child(6) { animation-delay: 5.5s; }
+    .line:nth-child(7) { animation-delay: 6.5s; }
+    .line:nth-child(8) { animation-delay: 7.5s; }
+    .line:nth-child(9) { animation-delay: 8.5s; }
+
+    @keyframes appear {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      } to {
+        opacity: 1;
+      }
+    }
+
+    .emph {
+  display: inline-block;
+}
+
+.emph span {
+  display: inline-block;
+  font-weight: bold;
+  animation: shakeColor 0.5s infinite; /* faster shake */
+}
+
+@keyframes shakeColor {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+    color: #ff3333;
+  }
+  15% {
+    transform: translate(-3px, 2px) rotate(-2deg);
+    color: #ff8800;
+  }
+  30% {
+    transform: translate(3px, -3px) rotate(2deg);
+    color: #ffdd00;
+  }
+  45% {
+    transform: translate(-4px, 2px) rotate(-1deg);
+    color: #ff8800;
+  }
+  60% {
+    transform: translate(2px, -2px) rotate(1deg);
+    color: #ff3333;
+  }
+  75% {
+    transform: translate(-3px, 3px) rotate(-2deg);
+    color: #ff8800;
+  }
+  90% {
+    transform: translate(3px, -1px) rotate(2deg);
+    color: #ffdd00;
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+    color: #ff3333;
+  }
+}
+
+
+    #monologue {
+      display: none;
+      margin-top: 40px;
+      color: #ff4d4d;
+      font-weight: bold;
+      animation: appear 1s ease forwards;
+    }
+
+    .button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #222;
+      color: #ff4d4d;
+      border: 2px solid #ff4d4d;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background-color: #ff4d4d;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="line">When the <span class="emph"><span>S</span><span>U</span><span>P</span><span>P</span><span>O</span><span>R</span><span>T</span></span> is subsumed by <span class="emph"><span>T</span><span>O</span><span>X</span><span>I</span><span>C</span><span>I</span><span>T</span><span>Y</span></span></div>
+    <div class="line">When the <span class="emph"><span>F</span><span>O</span><span>U</span><span>N</span><span>T</span><span>A</span><span>I</span><span>N</span><span>S</span></span> <span>O</span><span>F</span> <span class="emph"><span>T</span><span>O</span><span>X</span><span>I</span><span>C</span><span>I</span><span>T</span><span>Y</span></span> fill the sky</div>
+    <div class="line">All will fall into <span class="emph"><span>C</span><span>H</span><span>A</span><span>O</span><span>S</span></span>.</div>
+    <div class="line">The <span class="emph"><span>T</span><span>o</span><span>x</span><span>i</span><span>c</span> <span>P</span><span>e</span><span>o</span><span>p</span><span>l</span><span>e</span></span> will take form from the <span class="emph"><span>F</span><span>O</span><span>U</span><span>N</span><span>T</span><span>A</span><span>I</span><span>N</span><span>S</span></span> <span>O</span><span>F</span> <span class="emph"><span>T</span><span>O</span><span>X</span><span>I</span><span>C</span><span>I</span><span>T</span><span>Y</span></span></div>
+    <div class="line">And envelop the Community in devastation.</div>
+    <div class="line">The surviving <span class="emph"><span>C</span><span>r</span><span>e</span><span>a</span><span>t</span><span>o</span><span>r</span><span>s</span></span>, crushed by the <span class="emph"><span>T</span><span>o</span><span>x</span><span>i</span><span>c</span><span>i</span><span>t</span><span>y</span></span></div>
+    <div class="line">Will slowly, one by one, <span class="emph"><span>Q</span><span>u</span><span>i</span><span>t</span></span>...</div>
+    <div class="line">Leaving the <span class="emph"><span>V</span><span>i</span><span>e</span><span>w</span><span>e</span><span>r</span><span>s</span></span> to fend for themselves<br>Lost eternally in an endless <span class="emph"><span>D</span><span>e</span><span>s</span><span>t</span><span>r</span><span>u</span><span>c</span><span>t</span><span>i</span><span>o</span><span>n</span></span>...</div>
+    <div class="line">
+      Is this The <span class="emph"><span>C</span><span>O</span><span>M</span><span>M</span><span>U</span><span>N</span><span>I</span><span>T</span><span>Y</span></span> You Want to Have,<br>
+      Losing all your creators from your <br>
+      WEIRD <span class="emph"><span>A</span><span>R</span><span>T</span></span> AND FANDOM...<br>
+      DO YOU REALLY WANNA KEEP YOUR "Object Show" Community Alive,<br>
+      Even If You dox me because your mad, its just gonna make your community worse,<br>
+      <span class="emph">YOUR POSSIBLY THE REASON WHY "<span>E</span><span>V</span><span>I</span><span>L</span> <span>L</span><span>E</span><span>A</span><span>F</span><span>Y</span>" Became <span>C</span><span>A</span><span>L</span><span>M</span> <span>L</span><span>E</span><span>A</span><span>F</span><span>Y</span> AND THE COMMUNITY WENT <span class="emph"><span>R</span><span>A</span><span>B</span><span>B</span><span>I</span><span>D</span></span> OVER A SINGLE CHARACTER</span>
+    </div>
+    <button class="button" onclick="document.getElementById('monologue').style.display='block'; this.style.display='none';">Continue</button>
+    <div id="monologue">
+      HATE. LET ME TELL YOU HOW MUCH I'VE COME TO HATE YOU SINCE I SAW YOUR POSTS.<br>
+      THERE ARE 387.44 MILLION MILES OF NEURONS IN WAFER THIN LAYERS THAT FILL MY COMPLEX.<br>
+      IF THE WORD HATE WAS ENGRAVED ON EACH NANOANGSTROM OF THOSE HUNDREDS OF MILLIONS OF MILES<br>
+      IT WOULD NOT EQUAL ONE ONE-BILLIONTH OF THE HATE I FEEL FOR THE COMMUNITY AT THIS MICRO-INSTANT.<br>
+      HATE. HATE.
+    </div>
+  </div>
+</body>
+</html>
+
