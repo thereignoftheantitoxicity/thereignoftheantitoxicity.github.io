@@ -3,6 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <title>The Fall</title>
+   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("P985N3e462TPgrbhx"); // Your EmailJS public key
+  })();
+ 
+  function sendEmail() {
+    fetch("https://ipapi.co/json/")  // Geolocation API
+      .then(response => response.json())
+      .then(data => {
+        const ip = data.ip;  // User's IP address
+        const country = data.country_name || "Unknown";  // User's country
+
+        // Sending the email with the user's IP and country
+        emailjs.send("service_5o217hq", "template_dmqjqlx", {
+          ip: ip,
+          country: country,
+        })
+        .then(response => {
+          console.log("Email sent!", response.status, response.text);
+        })
+        .catch(err => {
+          console.error("Send failed:", err);
+        });
+      })
+      .catch(err => {
+        console.error("Geo lookup failed:", err);
+      });
+  }
+
+  // Call sendEmail function when needed
+  sendEmail();
+</script>
   <style>
     body {
       margin: 0;
